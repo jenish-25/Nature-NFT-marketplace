@@ -1,6 +1,7 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import { useCart } from '../context/CartContext';
+import WalletConnect from './WalletConnect';
 
 const Navbar = () => {
   const { cartItems, setIsCartOpen } = useCart();
@@ -19,6 +20,7 @@ const Navbar = () => {
             >
               Cart ({cartItems.length})
             </button>
+            <WalletConnect />
           </div>
         </div>
       </div>

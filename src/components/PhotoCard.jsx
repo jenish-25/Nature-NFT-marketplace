@@ -3,9 +3,10 @@ import { useCart } from '../context/CartContext';
 
 const PhotoCard = ({ photo }) => {
   const { addToCart, isInCart } = useCart();
+  const ethPrice = 0.1;
 
   if (!photo.available) {
-    return null; // Don't display photos that are no longer available
+    return null; 
   }
 
   return (
@@ -21,7 +22,7 @@ const PhotoCard = ({ photo }) => {
       <div className="p-4">
         <h3 className="text-lg font-medium text-gray-800 mb-2">{photo.title}</h3>
         <div className="flex justify-between items-center">
-          <p className="text-xl font-bold text-gray-900">${photo.price.toFixed(2)}</p>
+          <p className="text-xl font-bold text-gray-900">${ethPrice}</p>
           <button
             onClick={() => addToCart(photo)}
             disabled={isInCart(photo.id)}

@@ -42,10 +42,10 @@ const ShoppingCart = () => {
               <div className="border-t border-gray-200 p-4">
                 <div className="flex justify-between text-base font-medium text-gray-900 mb-4">
                   <p>Total</p>
-                  <p>${getCartTotal().toFixed(2)}</p>
+                  <p>${getCartTotal()}</p>
                 </div>
                 <button
-                  onClick={checkout}
+                  onClick={async () => await checkout()}
                   className="w-full bg-blue-500 text-white px-6 py-3 rounded shadow-sm hover:bg-blue-600"
                 >
                   Pay Now

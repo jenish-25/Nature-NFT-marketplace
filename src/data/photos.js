@@ -4,14 +4,14 @@ export const photos = [
       id: "1",
       title: "Mountain Landscape",
       src: "https://images.unsplash.com/photo-1501854140801-50d01698950b",
-      price: 29.99,
+      price: 0.99,
       available: true
     },
     {
       id: "2",
       title: "Forest View",
       src: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9",
-      price: 24.99,
+      price: 0.24,
       available: true
     },
     {
