@@ -3,7 +3,7 @@ import { useCart } from '../context/CartContext';
 
 const PhotoCard = ({ photo }) => {
   const { addToCart, isInCart } = useCart();
-  const ethPrice = 0.1;
+  const ethPrice = 0.000001;
 
   if (!photo.available) {
     return null; 

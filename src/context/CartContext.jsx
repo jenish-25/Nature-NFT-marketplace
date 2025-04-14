@@ -97,8 +97,8 @@ export const CartProvider = ({ children }) => {
   };
 
   const getCartTotal = () => {
-    const pricePerItem = 0.01; 
-    return (cartItems.length * pricePerItem).toFixed(8); 
+    const pricePerItem = 0.000001;
+    return (cartItems.length * pricePerItem).toFixed(6); 
   };
 
   const isInCart = (photoId) => {
@@ -152,10 +152,9 @@ export const CartProvider = ({ children }) => {
       console.log("Transaction params:", txParams);
       
       try {
-        const tx = await signer.sendTransaction(txParams); 
+        const tx = await signer.sendTransaction(txParams);
         console.log("Transaction hash:", tx.hash);
-      
-        await tx.wait(); 
+        await tx.wait();
         console.log("Transaction confirmed!");
       } catch (error) {
         console.error("Transaction failed:", error);
